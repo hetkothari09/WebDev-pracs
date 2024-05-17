@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lazy Loader</title>
+</head>
+
+<style>
+    body {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .loader {
+        font-size: 24px;
+        color: #555;
+    }
+
+</style>
+
+<body>
+    <div class = "container" id = "container">
+        <div class = "content" id = "content">
+            <div class = "loader" id = "loader">
+                Loading ...
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            setTimeout(() => {
+                document.getElementById('loader').classList.add('hidden');
+
+                const content = `
+                <p>This is the loaded content</p>
+                `;
+
+                document.getElementById('content').innerHTML = content;
+            }, 3000);
+        });
+    </script>
+
+
+</body>
