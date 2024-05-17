@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Input with Recommendation</title>
+    <style>
+        #recommendation {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="inputBox" placeholder="Type something...">
+    <div id="recommendation"></div>
+
+    <script>
+        const inputBox = document.getElementById('inputBox');
+        const recommendationDiv = document.getElementById('recommendation');
+        let previousWord = '';
+
+        inputBox.addEventListener('input', () => {
+            const currentInput = inputBox.value.trim();
+            if (currentInput === '' && previousWord !== '') {
+                recommendationDiv.textContent = `Previous word: ${previousWord}`;
+            } else {
+                recommendationDiv.textContent = '';
+            }
+        });
+
+        inputBox.addEventListener('change', () => {
+            const currentInput = inputBox.value.trim();
+            if (currentInput !== '') {
+                previousWord = currentInput;
+            }
+        });
+    </script>
+</body>
+</html>
