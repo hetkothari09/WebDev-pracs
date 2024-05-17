@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change image size</title>
+</head>
+<style>
+    .half-size {
+        width: 25%;
+        height: 25%;
+    }
+
+    img {
+        width: 40%;
+        height: 40%;
+    }
+
+</style>
+<body>
+    <div class="container">
+        <img id = 'image' src = 'assets/a.jpg' alt = 'IMAGE' />
+        <button onclick="ChangeSize()">Change Sizes</button>
+    </div>
+
+    <script>
+        function ChangeSize(){
+            var image = document.getElementById('image');
+            image.classList.toggle('half-size');
+        }
+
+    </script>
+
+</body>
+</html>
