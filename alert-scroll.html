@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Alert</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Scroll Down ... </h1>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const TriggerPoint = document.documentElement.clientHeight * 1.25;   // 75% viewport
+            if(scrollY > TriggerPoint){
+                alert("You have scrolled more than 125% of the page!!!");
+            }
+        });
+    </script>
+</body>
+</html>
